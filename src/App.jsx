@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,React } from 'react'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import NavbarTop from './components/NavbarTop'
@@ -23,26 +23,17 @@ import Footer from './components/Footer';
 import pdf from '/files/Qureshi Abdul Kader Javed ResumeV-28.pdf'
 import { Route, Routes } from 'react-router-dom';
 
+import ConfettiExplosion from 'react-confetti-explosion';
+
 function App() {
+  const [isExploding, setIsExploding] = useState(false);
 
-  <Routes>
-      
-      
-      <Route path='/Projects' element={<ProjectList /> } />
-      <Route path='/Skills' element={<TechnologyList /> } />
-      
-
-
-
-
-  </Routes>
 
   const styles = {
 
     fontFamily: "Poppins, serif",
     fontWeight: "600",
     fontStyle: "normal",
-
   }
 
 
@@ -56,13 +47,29 @@ function App() {
     
   };
 
+
+  const triggerExplosion = () => {
+    setIsExploding(true);
+
+    // Reset state after a short delay to allow re-triggering
+    setTimeout(() => {
+      setIsExploding(false);
+    }, 100); // Adjust the duration to match the animation length
+  };
+
     const handleDownloadPdf = () => {
+      triggerExplosion();
+      
+      
+
       const pdfPath = pdf
 
       const link = document.createElement("a");
       link.href = pdfPath; // Path to the PDF in the public folder
       link.download = "Qureshi Abdul Kader Javed ResumeV-28.pdf"; // File name for download
+      
       link.click();
+      
     }
 
 
@@ -70,7 +77,11 @@ function App() {
 
 
   return (
-    <>
+    <div>
+
+
+
+
 
       <NavbarTop />
 <br/>
@@ -81,9 +92,12 @@ function App() {
             <Stack>
               <LeftText />
               <Button style={{border:'none'
-              } }className='btn btn-primary px-3 py-2 d-inline-block' onClick={handleDownloadPdf}>Download Resume</Button>
+              }}className='btn btn-primary px-3 py-2 d-inline-block' onClick={handleDownloadPdf}>Download Resume</Button>
+          {isExploding && <ConfettiExplosion force={0.9} particleCount={500} width={2000}/>}
+          
             </Stack>
           </Col>
+          
 
 {/* Right Image */}
 
@@ -149,7 +163,7 @@ function App() {
 </Container>
 
 
-    </>
+    </div>
   )
 }
 

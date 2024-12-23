@@ -18,7 +18,7 @@ const projectData = [
     ProjectTitle: "Portfolio Website",
     ProjectDescription: "Portfolio website containing all the details of my profile",
     Technologies: ["MERN Stack", "React.js", "Node.js"],
-    GithubLink: "https://github.com/",
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/Portfolio",
     CreatedDate: "December 2024",
   },
   {
@@ -55,7 +55,7 @@ const projectData = [
     ProjectTitle: "E-Exam Cell",
     ProjectDescription: "Developed a system for seamless examination form submission, fee payment, and approval, streamlining administrative workflows.",
     Technologies: ["MERN Stack", "React.js", "Node.js", "MongoDB"],
-    GithubLink: "https://github.com/your-repo-link-e-exam-cell",
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/E_Exam_Cell",
     CreatedDate: "December 2023",
   },
  
@@ -63,31 +63,27 @@ const projectData = [
 
 
 
-const CardStyle={
 
-
-
-}
 
 // ... (projectData remains the same)
 
 function Projects({ project }) {
   return (
     <Card className="mb-3"  style = {{
-      
+      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
       
     }}>
       <Row className="g-0">
         <Col xs={12} md={8} className="p-3"> {/* Changed Col structure here */}
           <Row className="g-0 align-items-center"> {/* Added g-0 to remove gutter */}
-            <Col xs={12} md={3} className="d-flex justify-content-center mb-2 mb-md-0"> {/* Image column */}
+            <Col xs={12} md={3} className="d-flex justify-content-center mb-3 mb-md-0"> {/* Image column */}
               <img
                 src={project.imgsrc}
                 alt={project.ProjectTitle}
                 style={{
-                  maxWidth: "100px", // Set a maximum width
-                  maxHeight: "100px",
-                  objectFit: "cover",
+                  maxWidth: "150px", // Set a maximum width
+                  maxHeight: "150px",
+                  objectFit: "contain",
                   borderRadius: "8px",
                 }}
               />

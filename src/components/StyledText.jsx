@@ -5,7 +5,7 @@ const StyledText = ({ text }) => {
     fontSize: '30px', // Adjust size as needed
     display: 'inline-block',
     fontFamily: "Poppins, serif",
-    fontWeight: "550",
+    fontWeight: "300",
     fontStyle: "normal",
   };
 

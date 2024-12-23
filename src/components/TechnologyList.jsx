@@ -10,8 +10,8 @@ import JS from '../assets/Skills/javascript.svg'
 
 const TechnologyCard = ({ technology }) => {
   return (
-    <div className="col-md-4 mb-4"> {/* Adjust column size as needed */}
-      <div className="card h-100"> {/* h-100 for equal card heights */}
+    <div className="col-md-3 mb-3">
+      <div className="card h-70" style={{boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4',}}> {/* h-100 for equal card heights */}
         <img
           src={technology.image}
           className="card-img-top img-fluid" // img-fluid for responsive images
@@ -107,8 +107,8 @@ const TechnologyList = () => {
   ];
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container" >
+      <div className="row" >
         {technologies.map((technology, index) => (
           <TechnologyCard key={index} technology={technology} />
         ))}
