@@ -1,0 +1,146 @@
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Badge from 'react-bootstrap/Badge';
+import exam from '.././assets/ProjectImages/exam_cell.jpg'
+import Button from 'react-bootstrap/Button'
+import text from '.././assets/ProjectImages/text.png'
+import open from '.././assets/ProjectImages/open.png'
+import face from '../assets/ProjectImages/face.jpg'
+import web from '../assets/ProjectImages/web.png'
+
+const projectData = [
+
+  {
+    id: 1,
+    imgsrc: web,
+    ProjectTitle: "Portfolio Website",
+    ProjectDescription: "Portfolio website containing all the details of my profile",
+    Technologies: ["MERN Stack", "React.js", "Node.js"],
+    GithubLink: "https://github.com/",
+    CreatedDate: "December 2024",
+  },
+  {
+    id: 2,
+    imgsrc: face,
+    ProjectTitle: "Smart Attendance System with Face Recognition and Anti-Spoofing Detection",
+    ProjectDescription: "Developed an advanced face recognition system with integrated anti-spoofing deep learning to ensure secure attendance tracking.",
+    Technologies: ["Deep Learning", "Computer Vision", "Python", "TensorFlow"],
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/Smart_Attendance_System_using_Face_Recognition_with_Anti_Spoofing",
+    CreatedDate: "August 2024",
+  },
+  {
+    id: 3,
+    imgsrc: text,
+    ProjectTitle: "Text Summarization with NLP, Cosine Similarity, and Word2Vec",
+    ProjectDescription: "Implemented an extractive text summarization application using NLP techniques, improving summary relevance and coherence.",
+    Technologies: ["NLP", "Python", "Word2Vec", "Cosine Similarity"],
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/Text-Summarization-with-NLP-Cosine-Similarity-and-Word2Vec",
+    CreatedDate: "September 2024",
+  },
+  {
+    id: 4,
+    imgsrc: open,
+    ProjectTitle: "Open Share - File Sharing Application",
+    ProjectDescription: "Created a secure web application for file sharing with high-end encryption, ensuring data privacy and protection.",
+    Technologies: ["MERN Stack", "React.js", "Node.js", "MongoDB"],
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/OpenShareApp",
+    CreatedDate: "June 2024",
+  },
+ 
+  {
+    id: 6,
+    imgsrc: exam,
+    ProjectTitle: "E-Exam Cell",
+    ProjectDescription: "Developed a system for seamless examination form submission, fee payment, and approval, streamlining administrative workflows.",
+    Technologies: ["MERN Stack", "React.js", "Node.js", "MongoDB"],
+    GithubLink: "https://github.com/your-repo-link-e-exam-cell",
+    CreatedDate: "December 2023",
+  },
+ 
+];
+
+
+
+const CardStyle={
+
+
+
+}
+
+// ... (projectData remains the same)
+
+function Projects({ project }) {
+  return (
+    <Card className="mb-3"  style = {{
+      
+      
+    }}>
+      <Row className="g-0">
+        <Col xs={12} md={8} className="p-3"> {/* Changed Col structure here */}
+          <Row className="g-0 align-items-center"> {/* Added g-0 to remove gutter */}
+            <Col xs={12} md={3} className="d-flex justify-content-center mb-2 mb-md-0"> {/* Image column */}
+              <img
+                src={project.imgsrc}
+                alt={project.ProjectTitle}
+                style={{
+                  maxWidth: "100px", // Set a maximum width
+                  maxHeight: "100px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+            </Col>
+            <Col xs={12} md={9}> {/* Text content column */}
+              <h5>{project.ProjectTitle}</h5>
+              <b><label className="text-muted small">Project Description:</label></b>
+              <p className="text-muted mb-2">{project.ProjectDescription}</p>
+              <b><small className="text-muted">Created: {project.CreatedDate}</small></b>
+            </Col>
+          </Row>
+        </Col>
+
+        {/* Right Section (Technologies and GitHub Button) */}
+        <Col xs={12} md={4} className="d-flex flex-column justify-content-center align-items-center p-3 border-start">
+          <div className="mb-2 text-center">
+            <label className="text-muted small">Technologies Used:</label>
+            <div className="d-flex flex-wrap justify-content-center">
+              {project.Technologies.map((tech, index) => (
+                <Badge key={index}   className='mx-1 mb-1'>{tech}</Badge>
+                 
+
+
+              ))}
+            </div>
+          </div>
+          {/* <Button
+            variant="dark"
+            href={project.GithubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            value="View on Github"
+            >
+         
+            </Button> */}
+           <Button variant="dark"
+            href={project.GithubLink}
+            target="_blank"
+            rel="noopener noreferrer"> View On Github</Button>
+        </Col>
+      </Row>
+    </Card>
+  );
+}
+
+const ProjectList = () => {
+  return (
+    <div className="container mt-4">
+      {projectData.map((project, index) => (
+        <Projects key={project.id} project={project} />
+      ))}
+    </div>
+  );
+};
+
+export default ProjectList;
