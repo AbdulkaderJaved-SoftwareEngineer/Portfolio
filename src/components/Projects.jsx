@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useRef,useEffect} from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +9,15 @@ import text from '.././assets/ProjectImages/text.png'
 import open from '.././assets/ProjectImages/open.png'
 import face from '../assets/ProjectImages/face.jpg'
 import web from '../assets/ProjectImages/web.png'
+import ScrollTrigger  from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+// Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
 
 const projectData = [
 
@@ -68,11 +77,35 @@ const projectData = [
 // ... (projectData remains the same)
 
 function Projects({ project }) {
+
+  const cardRef = useRef(null);
+
+
+
+
+  useEffect(() => {
+    // Animate the card when it enters the viewport
+    gsap.fromTo(
+      cardRef.current,
+      { opacity: 0, y: 50 }, // Initial state
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cardRef.current, // Element to trigger animation
+          start: "top 80%", // Animation starts when card enters the viewport
+        },
+      }
+    );
+  }, []);
+
   return (
     <Card className="mb-3"  style = {{
       boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
       
-    }}>
+    }} ref={cardRef}>
       <Row className="g-0">
         <Col xs={12} md={8} className="p-3"> {/* Changed Col structure here */}
           <Row className="g-0 align-items-center"> {/* Added g-0 to remove gutter */}

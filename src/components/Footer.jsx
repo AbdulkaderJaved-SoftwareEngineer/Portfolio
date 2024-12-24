@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 const Footer = () => {
   return (
     <footer className="bg-dark text-light py-4">
-      <Container>
+      <Container fluid>
         <Row>
          
 
@@ -30,7 +30,7 @@ const Footer = () => {
         <hr className="border-light" />
         <Row>
           <Col className="text-center">
-            <p className="mb-0">Made with 🔥 by Abdul Kader Javed Qureshi..</p>
+            <p className="mb-0">Made with 😊 by Abdul Kader Javed Qureshi..</p>
           </Col>
         </Row>
       </Container>
