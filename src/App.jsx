@@ -18,7 +18,8 @@ import Hero from './components/Hero';
 function App() {
 
   return (
-    <div>
+    <div style={{background: 'rgb(2,0,36)',
+      background: 'linear-gradient(257deg, rgba(2,0,36,1) 0%, rgba(75,151,158,1) 70%, rgba(52,16,30,1) 100%)'}}>
 
 
 

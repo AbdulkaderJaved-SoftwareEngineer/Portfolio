@@ -6,8 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 
-
-
 function NavbarTop() {
   return (
 
@@ -18,10 +16,16 @@ function NavbarTop() {
 
 
 
-    <Navbar expand="lg" className="bg-body-tertiary" bg="light" data-bs-theme="light">
+    <Navbar expand="lg"  style={{ backgroundColor: 'transparent',fontFamily: "Poppins, serif",
+        fontWeight: "600",
+        fontStyle: "normal",
+        fontSize:'13px' }}
+        
+        >
+
     <Container fluid>
-     
-      <Navbar.Brand >Abdul Kader Javed Qureshi</Navbar.Brand>
+    
+      <Navbar.Brand style={{color:'white'}}>Abdul Kader Javed Qureshi</Navbar.Brand>
       
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

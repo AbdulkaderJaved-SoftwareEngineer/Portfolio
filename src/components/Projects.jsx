@@ -91,7 +91,7 @@ function Projects({ project }) {
       {
         opacity: 1,
         y: 0,
-        duration: 0.9,
+        duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: cardRef.current, // Element to trigger animation
@@ -104,7 +104,7 @@ function Projects({ project }) {
   return (
     <Card className="mb-3"  style = {{
       boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-      
+      zIndex:'3'
     }} ref={cardRef}>
       <Row className="g-0">
         <Col xs={12} md={8} className="p-3"> {/* Changed Col structure here */}
