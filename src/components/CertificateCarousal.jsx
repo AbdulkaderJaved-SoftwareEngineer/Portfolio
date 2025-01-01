@@ -8,6 +8,7 @@ import iot from '.././assets/Certificates/iot.png'
 import msa from '.././assets/Certificates/microsoft_array.png'
 import aws from '.././assets/Certificates/aws.png'
 import SIH from '.././assets/Certificates/SIH.png'
+import Oracle from ".././assets/Certificates/oracle.png";
 
 function CertificateCarousal() {
   return (
@@ -44,6 +45,17 @@ function CertificateCarousal() {
         <img
           className="d-block w-100"
           src={aws}
+          alt="Third slide"
+        />
+        
+      </Carousel.Item>
+
+
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Oracle}
           alt="Third slide"
         />
         
