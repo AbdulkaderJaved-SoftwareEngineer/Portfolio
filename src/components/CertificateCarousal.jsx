@@ -9,7 +9,7 @@ import msa from '.././assets/Certificates/microsoft_array.png'
 import aws from '.././assets/Certificates/aws.png'
 import SIH from '.././assets/Certificates/SIH.png'
 import Oracle from ".././assets/Certificates/oracle.png";
-
+import {Datadog} from ".././assets/Certificates/dd.png"
 function CertificateCarousal() {
   return (
     <Carousel data-bs-theme="dark" interval={1000}>
@@ -34,6 +34,14 @@ function CertificateCarousal() {
         <img
           className="d-block w-100"
           src={dl}
+          alt="Third slide"
+        />
+        
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={Datadog}
           alt="Third slide"
         />
         
