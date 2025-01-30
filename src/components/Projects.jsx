@@ -9,7 +9,7 @@ import text from '.././assets/ProjectImages/text.png'
 import open from '.././assets/ProjectImages/open.png'
 import face from '../assets/ProjectImages/face.jpg'
 import web from '../assets/ProjectImages/web.png'
-import jewel from '../assets/ProjectImages/jewel.png'
+import jewel from '../assets/ProjectImages/jewelry.png'
 
 import ScrollTrigger  from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
