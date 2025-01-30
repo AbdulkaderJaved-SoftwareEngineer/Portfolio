@@ -44,7 +44,7 @@ function Hero() {
     
           const link = document.createElement("a");
           link.href = pdfPath; // Path to the PDF in the public folder
-          link.download = "Qureshi Abdul Kader Javed ResumeV-28.pdf"; // File name for download
+          link.download = "Qureshi Abdul Kader Javed ResumeV-36.pdf"; // File name for download
           
           link.click();
           
