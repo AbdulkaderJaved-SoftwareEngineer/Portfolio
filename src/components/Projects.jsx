@@ -9,6 +9,8 @@ import text from '.././assets/ProjectImages/text.png'
 import open from '.././assets/ProjectImages/open.png'
 import face from '../assets/ProjectImages/face.jpg'
 import web from '../assets/ProjectImages/web.png'
+import jewel from '../assets/ProjectImages/jewel.png'
+
 import ScrollTrigger  from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 // Register ScrollTrigger
@@ -65,6 +67,16 @@ const projectData = [
     ProjectDescription: "Developed a system for seamless examination form submission, fee payment, and approval, streamlining administrative workflows.",
     Technologies: ["MERN Stack", "React.js", "Node.js", "MongoDB"],
     GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/E_Exam_Cell",
+    CreatedDate: "December 2023",
+  },
+
+  {
+    id: 7,
+    imgsrc: jewel,
+    ProjectTitle: "Online Ecommerce Jewellery Website",
+    ProjectDescription: "Developed an online ecommerce jewelry website",
+    Technologies: ["HTML5","CSS3","JavaScript","JQuery","PHP","MySQL","Bootstrap"],
+    GithubLink: "https://github.com/AbdulkaderJaved-SoftwareEngineer/Internship-Jewellery-Website",
     CreatedDate: "December 2023",
   },
  
