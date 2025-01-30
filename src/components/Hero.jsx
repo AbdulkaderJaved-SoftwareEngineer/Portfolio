@@ -9,7 +9,7 @@ import RightImage from './RightImage';
 import LeftText from './LeftText';
 import ConfettiExplosion from 'react-confetti-explosion';
 
-import pdf from '/files/Qureshi_Abdul_Kader_Javed_ResumeV-28.pdf'
+import pdf from '/files/Qureshi_Abdul_Kader_Javed_ResumeV-36.pdf'
 
 
 function Hero() {
