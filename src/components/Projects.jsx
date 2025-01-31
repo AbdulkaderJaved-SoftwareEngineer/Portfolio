@@ -88,7 +88,7 @@ const projectData = [
 
 // ... (projectData remains the same)
 
-function Projects({ project }) {
+function Projects({ project}) {
 
   const cardRef = useRef(null);
 
@@ -114,7 +114,7 @@ function Projects({ project }) {
   }, []);
 
   return (
-    <Card className="mb-3"  style = {{
+    <Card className="mb-3"   style = {{
       boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
       zIndex:'3'
     }} ref={cardRef}>

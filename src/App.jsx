@@ -1,21 +1,38 @@
-import { useState,React } from 'react'
+import { forwardRef,useRef,useState,React } from 'react'
 import Container from 'react-bootstrap/Container'
 import NavbarTop from './components/NavbarTop'
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import ProjectList from './components/Projects';
-
 import StyledText from './components/StyledText';
 import TechnologyList from './components/TechnologyList';
 import CertificateCarousal from './components/CertificateCarousal';
 import Footer from './components/Footer';
-
-
-
-
 import Hero from './components/Hero';
 
+
+
+
 function App() {
+
+const skillsRef = useRef(null);
+const contactRef = useRef(null);
+
+const scrollToSkills = () => {
+  if (skillsRef.current) {
+    skillsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
+const scrollToContact = () => {
+  if (contactRef.current) {
+    contactRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+};
+
+
+
+
 
   return (
     <div style={{background: 'rgb(2,0,36)',
@@ -25,7 +42,7 @@ function App() {
 
 
 
-      <NavbarTop />
+      <NavbarTop onSkillsClick={scrollToSkills} onContactClick={scrollToContact} />
 <br/>
       <Hero /> 
 
@@ -55,7 +72,7 @@ function App() {
 <StyledText text="Skills " />
 <hr />
 
-<TechnologyList />
+<TechnologyList skillsRef={skillsRef}/>
 
 
 </Container>
@@ -75,7 +92,7 @@ function App() {
 </Container>
 <Container fluid>
 
-<Footer/>
+<Footer contactRef={contactRef}/>
 
 </Container>
 
