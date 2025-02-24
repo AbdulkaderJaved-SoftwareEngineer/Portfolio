@@ -9,7 +9,7 @@ import RightImage from './RightImage';
 import LeftText from './LeftText';
 import ConfettiExplosion from 'react-confetti-explosion';
 
-import pdf from '/files/Qureshi_Abdul_Kader_Javed_ResumeV-36.pdf'
+import pdf from '/files/Qureshi Abdul Kader Javed ResumeV-39.pdf'
 
 
 function Hero() {
@@ -44,7 +44,7 @@ function Hero() {
     
           const link = document.createElement("a");
           link.href = pdfPath; // Path to the PDF in the public folder
-          link.download = "Qureshi_Abdul_Kader_Javed_ResumeV-36.pdf"; // File name for download
+          link.download = "Qureshi Abdul Kader Javed ResumeV-39.pdf"; // File name for download
           
           link.click();
           
