@@ -116,8 +116,11 @@ function Projects({ project}) {
   return (
     <Card className="mb-3"   style = {{
       boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
-      zIndex:'3'
-    }} ref={cardRef}>
+      zIndex:'3',
+      background:'linear-gradient(to bottom, rgb(26, 30, 61), rgb(31, 17, 30))',
+      backdropFilter: "blur(10px) brightness(80%)",
+    }} 
+    ref={cardRef}>
       <Row className="g-0">
         <Col xs={12} md={8} className="p-3"> {/* Changed Col structure here */}
           <Row className="g-0 align-items-center"> {/* Added g-0 to remove gutter */}
@@ -133,11 +136,12 @@ function Projects({ project}) {
                 }}
               />
             </Col>
-            <Col xs={12} md={9}> {/* Text content column */}
-              <h5>{project.ProjectTitle}</h5>
-              <b><label className="text-muted small">Project Description:</label></b>
-              <p className="text-muted mb-2">{project.ProjectDescription}</p>
-              <b><small className="text-muted">Created: {project.CreatedDate}</small></b>
+            <Col xs={12} md={9} style={{color:'white'}}
+            > {/* Text content column */}
+              <h5 style={{color:'#E0E0E0'}}>{project.ProjectTitle}</h5>
+              <b ><label className="small" >Project Description:</label></b>
+              <p className=" mb-2" style={{color:'#B0B0B0'}}>{project.ProjectDescription}</p>
+              <b><small className="" >Created: {project.CreatedDate}</small></b>
             </Col>
           </Row>
         </Col>
@@ -145,10 +149,13 @@ function Projects({ project}) {
         {/* Right Section (Technologies and GitHub Button) */}
         <Col xs={12} md={4} className="d-flex flex-column justify-content-center align-items-center p-3 border-start">
           <div className="mb-2 text-center">
-            <label className="text-muted small">Technologies Used:</label>
+            <label className="small text-white" ><span>Technologies Used:</span></label>
             <div className="d-flex flex-wrap justify-content-center">
               {project.Technologies.map((tech, index) => (
-                <Badge key={index}   className='mx-1 mb-1'>{tech}</Badge>
+                <Badge key={index} 
+                
+                style={{backgroundColor:"#1E90FF"}}
+                className='mx-1 mb-1'>{tech}</Badge>
                  
 
 
@@ -164,7 +171,7 @@ function Projects({ project}) {
             >
          
             </Button> */}
-           <Button variant="dark"
+           <Button style={{background:"#D32F2F",border:'none'}}
             href={project.GithubLink}
             target="_blank"
             rel="noopener noreferrer"> View On Github</Button>

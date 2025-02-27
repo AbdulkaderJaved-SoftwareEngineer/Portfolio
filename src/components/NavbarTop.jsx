@@ -11,14 +11,14 @@ function NavbarTop({ onSkillsClick,onContactClick }) {
   const [isHovered2, setIsHovered2] = useState(false);
   
   const buttonStyle = {
-    borderBottom: isHovered1 ? "3px solid white" : "transparent",
+    borderBottom: isHovered1 ? "3px solid red" : "transparent",
     transition: isHovered1 ? "ease-in-out 0.1s":"",
     color:"white"
     
   };
 
   const buttonStyle2 = {
-    borderBottom: isHovered2 ? "3px solid white" : "transparent",
+    borderBottom: isHovered2 ? "3px solid red" : "transparent",
     transition: isHovered2 ? "ease-in-out 0.1s":"",
     color:"white"
     
@@ -41,7 +41,11 @@ function NavbarTop({ onSkillsClick,onContactClick }) {
 
     <Container fluid>
     
-      <Navbar.Brand style={{color:'white'}}>Abdul Kader Javed Qureshi</Navbar.Brand>
+      <Navbar.Brand style={{color:'white',wordWrap: "break-word",
+        overflowWrap: "break-word",
+        whiteSpace: "normal"
+        }}>
+          <span style={{fontSize:'50px',color:"#E50914"}}>A</span>BDUL <span style={{fontSize:'50px',color:"#E50914"}}>K</span>ADER <span style={{fontSize:'50px',color:"#E50914"}}>J</span>AVED <span style={{fontSize:'50px',color:"#E50914"}}>Q</span>URESHI</Navbar.Brand>
       
       <Navbar.Toggle aria-controls="basic-navbar-nav" style={{
 

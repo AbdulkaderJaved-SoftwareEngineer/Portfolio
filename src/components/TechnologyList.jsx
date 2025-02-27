@@ -10,8 +10,14 @@ import JS from "../assets/Skills/javascript.svg";
 
 const TechnologyCard = forwardRef(({ technology }, ref) => {
   return (
-    <div className="col-md-3 mb-3" ref={ref}>
-      <div className="card h-70" style={{ boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)" }}>
+    <div className="col-md-3 mb-3" ref={ref} >
+      <div className="card h-70" 
+      style={{ 
+        boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
+        background: 'rgb(26, 30, 61)',
+        backgroundColor: 'linear-gradient(to bottom, rgb(26, 30, 61), rgb(31, 17, 30))'
+
+      }}>
         <img
           src={technology.image}
           className="card-img-top img-fluid"
@@ -20,7 +26,7 @@ const TechnologyCard = forwardRef(({ technology }, ref) => {
         />
 
         <div className="card-body d-flex flex-column align-items-center">
-          <h5 className="card-title">{technology.name}</h5>
+          <h5 className="card-title text-white">{technology.name}</h5>
         </div>
       </div>
     </div>
@@ -43,7 +49,7 @@ const TechnologyList = ({ skillsRef }) => {
 
   return (
     <div className="container" ref={skillsRef}>
-      <h2 className="text-center my-4">Skills</h2>
+    
       <div className="row">
         {technologies.map((technology, index) => (
           <TechnologyCard key={index} technology={technology} />

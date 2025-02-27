@@ -9,8 +9,8 @@ import TechnologyList from './components/TechnologyList';
 import CertificateCarousal from './components/CertificateCarousal';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-
-
+import gradientBackground from "../public/files/gradient_background.jpg";
+import EducationTimeline from '../EducationTimeline';
 
 
 function App() {
@@ -35,8 +35,14 @@ const scrollToContact = () => {
 
 
   return (
-    <div style={{background: 'rgb(2,0,36)',
-      background: 'linear-gradient(257deg, rgba(2,0,36,1) 0%, rgba(75,151,158,1) 70%, rgba(52,16,30,1) 100%)'}}>
+    <div style={{
+      // background: 'rgb(2,0,36)',
+      // background: 'linear-gradient(257deg, rgba(2,0,36,1) 0%, rgba(75,151,158,1) 70%, rgba(52,16,30,1) 100%)'
+      background: "#141414"
+      
+      
+      
+      }}>
 
 
 
@@ -51,13 +57,32 @@ const scrollToContact = () => {
 {/* Container No 2 */}
 
 
+<Container>
+<br />
+
+<h2 className=" text-white">Education</h2>
+<Dropdown.Divider/>
+<div className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
+      <EducationTimeline />
+    </div>
+
+
+</Container>
+
+
+
+
+
+
+
+
 
 
 <Container>
   <br /><br />
-<Dropdown.Divider />
+<Dropdown.Divider title='Projects' />
 
-<StyledText text="My Projects" />
+<h3 className="text-white" style={{fontFamily:"Poppins, serif",fontWeight:"650"}}>My Personal Projects</h3>
 <hr />
 
   <ProjectList />
@@ -69,7 +94,7 @@ const scrollToContact = () => {
   <br /><br />
 
 
-<StyledText text="Skills " />
+  <h3 className="text-white" style={{fontFamily:"Poppins, serif",fontWeight:"650"}}>My Skills</h3>
 <hr />
 
 <TechnologyList skillsRef={skillsRef}/>
@@ -84,7 +109,8 @@ const scrollToContact = () => {
 
 <Container>
   <br /><br />
-<StyledText text='My Certifications'/>
+  <h3 className="text-white" style={{fontFamily:"Poppins, serif",fontWeight:"650"}}>My Certifications</h3>
+
 <hr/>
 <CertificateCarousal />
 

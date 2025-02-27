@@ -32,8 +32,9 @@ function RightImage() {
 style={{
     width:'350px',
     height:'350px',
-    objectFit:'cover',
-    marginLeft:'10%'
+    objectFit:"cover",
+    marginLeft:'10%',
+    boxShadow: '10px 10px 39px 0px rgba(0,0,0,0.75)'
     }}/>
 
 

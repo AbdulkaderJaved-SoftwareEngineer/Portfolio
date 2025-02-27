@@ -20,7 +20,9 @@ function Hero() {
         boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4', // Soft shadow
         borderRadius: '10px', // Rounded corners
         padding : '50px',
-        background:'#D9EAFD'
+        
+        backdropFilter: "blur(10px) brightness(80%)",
+      
         
       };
 
@@ -59,7 +61,7 @@ function Hero() {
       <Col md={6} className=" text-center py-4"  >
         <Stack>
           <LeftText />
-          <Button style={{border:'none'
+          <Button style={{border:'none',background:"#E50914",fontFamily:"Poppins, serif"
           }}className='btn btn-primary px-3 py-2 d-inline-block' onClick={handleDownloadPdf}>Download Resume</Button>
       
       {isExploding && <ConfettiExplosion force={0.5} particleCount={1000} width={1700}/>}

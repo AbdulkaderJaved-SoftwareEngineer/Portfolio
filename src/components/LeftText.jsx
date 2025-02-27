@@ -27,6 +27,7 @@ function LeftText() {
         fontFamily: "Poppins, serif",
         fontWeight: "600",
         fontStyle: "normal",
+        color:'white'
     
       }
      
@@ -39,6 +40,7 @@ function LeftText() {
         fontWeight: "100",
         fontStyle: "normal",
         fontSize:'13px',
+        color:"white"
         
       }
     
@@ -49,6 +51,7 @@ function LeftText() {
         // backgroundColor: 'linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
+        
       }
     
 
@@ -56,7 +59,7 @@ function LeftText() {
   return (
     <>
     <h1 style={styles} ref={textRef}>
-    Hi <span style={{fontSize:'20px'}}>👋😊 </span>I am<br/>  <span style={gradient}  >Abdul Kader Javed Qureshi</span>
+    Hi <span style={{fontSize:'20px'}}>👋😊 </span>I am<br/>  <span style={{color:"white"}}  >Abdul Kader Javed Qureshi</span>
 
     </h1>
     <p style={stylesRegular} className='text-start' ref={textRef1}>
